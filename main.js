@@ -8,6 +8,7 @@ const up = document.getElementById("up");
 const down = document.getElementById("down");
 const left = document.getElementById("left");
 const right = document.getElementById("right");
+const dlURL = document.getElementById("dlURL");
 
 const ctx = canvas.getContext("2d");
 const ctx2 = canvas2.getContext("2d");
@@ -46,6 +47,16 @@ function move(e){
 
 button.onclick = () => {
     ctx2.drawImage(canvas, 0, 0);
+    canvas2.hidden = false;
+
+    const cvs = document.getElementById("canvas");
+    const png = cvs.toDataURL();
+    console.log(png);
+    /*
+    dlURL.innerHTML = `<a href="${png}" download>画像を保存</a>`
+    */
+
+    dlURL.innerHTML = `<img src="${png}">`
 }
 
 bigbutton.onclick = () => {size += 10};
