@@ -52,11 +52,8 @@ button.onclick = () => {
     const cvs = document.getElementById("canvas");
     const png = cvs.toDataURL();
     console.log(png);
-    /*
     dlURL.innerHTML = `<a href="${png}" download>画像を保存</a>`
-    */
-
-    dlURL.innerHTML = `<img src="${png}">`
+    
 }
 
 bigbutton.onclick = () => {size += 10};
