@@ -53,7 +53,6 @@ button.onclick = () => {
     const png = cvs.toDataURL();
     console.log(png);
     dlURL.innerHTML = `<a href="${png}" download>画像を保存</a>`
-    
 }
 
 bigbutton.onclick = () => {size += 10};
