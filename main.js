@@ -23,7 +23,7 @@ let y = 0;
 let drag = false;
 
 navigator.mediaDevices.getUserMedia({
-    video: true,
+    video: { facingMode: "environment" },
     audio: false,
 }).then(stream =>{
     video.srcObject = stream;
