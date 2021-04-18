@@ -8,7 +8,7 @@ const changebutton = document.getElementById("change");
 const ctx = canvas.getContext("2d");
 const ctx2 = canvas2.getContext("2d");
 
-const imglist = ["oni1.png", "oni2.png"];
+const imglist = ["oni1.PNG", "oni2.PNG"];
 
 let img = new Image();
 let imgnum = 0;
