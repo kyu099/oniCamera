@@ -54,7 +54,6 @@ changebutton.onclick = () => {
     if(imgnum < imglist.length - 1) imgnum++;
     else imgnum = 0;
     img.src = imglist[imgnum];
-    console.log(imglist.length, imgnum, imglist[imgnum]);
 }
 up.onclick = () => {if(y > - size) y -= 20}
 down.onclick = () => {if(y < size + canvas.height) y += 20}
