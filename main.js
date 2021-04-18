@@ -4,6 +4,10 @@ const button = document.getElementById("btn");
 const bigbutton = document.getElementById("big");
 const smallbutton = document.getElementById("small");
 const changebutton = document.getElementById("change");
+const up = document.getElementById("up");
+const down = document.getElementById("down");
+const left = document.getElementById("left");
+const right = document.getElementById("right");
 
 const ctx = canvas.getContext("2d");
 const ctx2 = canvas2.getContext("2d");
@@ -45,13 +49,17 @@ button.onclick = () => {
 }
 
 bigbutton.onclick = () => {size += 10};
-smallbutton.onclick = () => {size -= 10};
+smallbutton.onclick = () => {if(size > 0) size -= 10};
 changebutton.onclick = () => {
     if(imgnum < imglist.length - 1) imgnum++;
     else imgnum = 0;
     img.src = imglist[imgnum];
     console.log(imglist.length, imgnum, imglist[imgnum]);
 }
+up.onclick = () => {if(y > - size) y -= 20}
+down.onclick = () => {if(y < size + canvas.height) y += 20}
+left.onclick = () => {if(x > - size) x -= 20}
+right.onclick = () => {if(x < size + canvas.width) x += 20}
 
 canvas.addEventListener('mousemove', move, false);
 canvas.addEventListener('mousedown', () => {drag = true;}, false);
