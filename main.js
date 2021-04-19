@@ -13,7 +13,7 @@ const dlURL = document.getElementById("dlURL");
 const ctx = canvas.getContext("2d");
 const ctx2 = canvas2.getContext("2d");
 
-const imglist = ["oni1.PNG", "oni2.PNG"];
+const imglist = ["oni1.PNG", "oni2.PNG","oni3.PNG","oni4.PNG"];
 
 let img = new Image();
 let imgnum = 0;
