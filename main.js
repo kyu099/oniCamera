@@ -14,7 +14,7 @@ const cameraChange = document.getElementById("cameraChange");
 const ctx = canvas.getContext("2d");
 const ctx2 = canvas2.getContext("2d");
 
-const imglist = ["oni1.PNG", "oni2.PNG","oni3.PNG","oni4.PNG"];
+const imglist = ["oni1.PNG", "oni2.PNG","oni3.PNG","oni4.PNG","oni5.PNG","oni6.PNG","oni7.PNG","oni8.PNG"];
 
 let img = new Image();
 let imgnum = 0;
@@ -69,9 +69,9 @@ changebutton.onclick = () => {
     img.src = imglist[imgnum];
 }
 up.onclick = () => {if(y > - size) y -= 20}
-down.onclick = () => {if(y < size + canvas.height) y += 20}
+down.onclick = () => {if(y < size) y += 20}
 left.onclick = () => {if(x > - size) x -= 20}
-right.onclick = () => {if(x < size + canvas.width) x += 20}
+right.onclick = () => {if(x < size) x += 20}
 
 cameraChange.onclick = () => {
     curSTREAM.getVideoTracks().forEach( (camera) => {
