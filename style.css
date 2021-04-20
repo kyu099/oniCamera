@@ -2,6 +2,11 @@ body{
     text-align: center;
 }
 
+button{
+    height: 40px;
+    min-width: 60px;
+}
+
 canvas{
     max-width: 100%;
 }
